@@ -1,0 +1,26 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<nav>
+    <div class="d-flex justify-content-between">
+      <img src="assets/cozentus.jpg" class="m-1" width="270px" height="40px">
+    <div class="example-button-container p-2">
+      <button mat-mini-fab class="bg-danger">
+        RS
+      </button><button mat-button [matMenuTriggerFor]="menu1"><span class="text-light">Ronit Sahoo</span></button>
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item class="back">Logout</button>
+      </mat-menu>
+    </div>
+
+    </div>
+    <div class="d-flex p-2">
+      <button mat-flat-button color="accent" class="mt-2 ms-2" [matMenuTriggerFor]="menu"><mat-icon>insert_drive_files</mat-icon>Courses<span class="bi bi-chevron-down ms-3"></span></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item class="back" routerLink="/courses"><mat-icon>insert_drive_files</mat-icon>Courses</button>
+        <button mat-menu-item class="back"routerLink="/programs"><mat-icon>list_alt</mat-icon>Programs</button>
+      </mat-menu>
+      <button mat-flat-button color="accent" routerLink="/batch" class="mt-2 ms-2"><mat-icon>people</mat-icon>Batch</button>
+      <button mat-flat-button color="accent" routerLink="/teachers" class="mt-2 ms-2"><mat-icon>person_outline</mat-icon>Teachers</button>   
+      <button mat-flat-button color="accent" routerLink="/students" class="mt-2 ms-2"><mat-icon>person_3</mat-icon>Students</button>   
+    </div>
+</nav>
